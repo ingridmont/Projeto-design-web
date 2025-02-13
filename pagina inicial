@@ -1,137 +1,119 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avaliação 1</title>
+    <title>Menu Estilizado</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
-        
-        *{ 
+        * {
             margin: 0;
-            border: 0;
             padding: 0;
-            
+            box-sizing: border-box;
         }
         
-
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to right, #e43099, #e499c4);
+            font-family: 'Inter', sans-serif;
         }
-       
-        header {
-            
-            text-align: center;
-            padding: 20px;
-            color: white;
-        }
-        nav {
+        
+        
+        .menu1 {
+            background-color: rgb(240, 237, 237);
+            height: 35px;
             display: flex;
             justify-content: center;
-            background: #e97dbf;
-            padding: 10px;
-            margin-left: 600px;
-            margin-right: 600px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 50px;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li {
-            display: inline;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-       
- 
-        nav:hover::after{
-            content:"Hobbies"; 
-            border: 1x solid;
-            position:absolute;
-            background-color: rgba(231, 36, 166, 0.986);
-            border-radius: 4px;
-            padding: 6px;   
-            left: 650px;
-
+            align-items: center;
+            font-size: 14px;
+            color: #000;
         }
         
-       
-        .main {
+        .menu2 {
+            background-color: #f8dce26c;
+            height: 50px;
             display: flex;
             align-items: center;
-            justify-content: center;
-   
-            text-align: center;
+            justify-content: space-between;
+            padding: 0 20px;
         }
-            
-        .card { 
-            padding: 20px;
-    
+        
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-image: url("01_076a272b-533f-481e-b826-31fdb292cc53.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        
         }
-
-        .card h2, .card p {
-            margin: 10px 0;
+        
+        .menu2:hover {
+            background-color: #fff;
         }
-
-        footer {
-            background: white;
-            color: black;
-            text-align: center;
-            padding: 15px;
+        
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+            text-transform: lowercase;
         }
-
-        .imagem {
-            max-width: 30%;
-            margin: 10px 0;
-            border-radius: 2000px;
+        
+        .logo span {
+            font-weight: normal;
         }
-
-        .segundaimagem {
-            max-width: 10%;
-            height: 10%;
-            border-radius: 10px;
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
         }
-
+        
+        .nav-links a {
+            text-decoration: none;
+            font-size: 14px;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .icons i {
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+        }
 
     </style>
 </head>
 <body>
-    
-    <header>
-        <h1>Barbie </h1>
-        <p>Sou uma boneca e personagem fictícia fabricada pela empresa estadunidense de brinquedos Mattel, Inc. e lançada em 9 de março de 1959. </p>
-    </header>
-
-    
-    <section class="main">
-        <div class="card">
-            <img class="imagem" src="barbie2.webp" >
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus atque modi suscipit tempora sed, ipsum nesciunt officia asperiores aliquam enim pariatur recusandae assumenda sequi odit perferendis, unde harum cumque quaerat.</p>
-            
-            <nav>
-                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Contatoo</a></li>
-                </ul>
+    <div class="menu">
+        <div class="menu1">
+            <p>free International shipping on orders $150+ USD. free returns always.</p>
+        </div>
+        <div class="main">
+            <div class="menu2">
+                <div class="logo">r.e.m.<span>beauty</span></div>
+                <div class="nav-links">
+                    <a href="#">NEW DREAMGLOW COLLECTION</a>
+                    <a href="#">BEST SELLERS</a>
+                    <a href="#">EYES ▾</a>
+                    <a href="#">LIP ▾</a>
+                    <a href="#">FACE ▾</a>
+                    <a href="#">SKINCARE</a>
+                    <a href="#">TOOLS</a>
+                    <a href="#">ABOUT</a>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-search"></i>
+                    <i class="far fa-user"></i>
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
             </div>
         </div>
-
-    
-    </section>
-    <setion>
-        <img class="segundaimagem" src="barbie2.webp" >
-
-    </setion>
-
-    <footer>
-        <p>&copy; 2025 - pagina fictícia</p>
-    </footer>
+    </div>
 </body>
 </html>

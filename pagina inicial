@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Estilizado</title>
+    <title>r.e.m beauty</title>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         * {
@@ -39,7 +39,7 @@
         .main {
             width: 100vw;
             height: 100vh;
-            background-image: url("01_076a272b-533f-481e-b826-31fdb292cc53.jpg");
+            background-image: url("modelo.jpg");
             background-repeat: no-repeat;
             background-size: cover;
         
@@ -86,7 +86,52 @@
             color: white;
             cursor: pointer;
         }
-
+        .explore-section {
+            padding: 20px;
+        }
+        .explore{
+            font-size: 25px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .product-container {
+            width: 100%;
+            padding: 20px 0;
+        }
+        .product {
+            display: flex;
+            justify-content: center;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product h3 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .product .price {
+            color: #555;
+            margin: 5px 0;
+        }
+        .product button {
+            background: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .detalhe a{
+           text-decoration: none;
+           font-size: 14px;
+            color: black;
+            padding: 10px;
+        }
+        .product button:hover {
+            background: rgb(51, 49, 49);
+        }
     </style>
 </head>
 <body>
@@ -112,6 +157,37 @@
                     <i class="far fa-user"></i>
                     <i class="fas fa-shopping-bag"></i>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="explore-section">
+        <p class="explore">EXPLORE</p>
+        <div class="detalhe">
+            <a href="#">NEW & TRENDING</a>
+            <a href="#">BESTSELLERS</a>
+            <a href="#">DISCOVER ALL</a>
+        </div>
+    </div>
+    <div class="product-content">
+        <div class="product">
+            <div class="swiper-wrapper">
+                <img src="serum.png" alt="Dreamglow Highlight Serum">
+                <h3>Dreamglow Highlight Serum</h3>
+                <p class="price">$26 | 3 shades</p>
+                <button>ADD TO BAG $26</button>
+            </div>
+            <div class="product">
+                <img src="glossybalm.png" alt="Glossy Balm">
+                <h3>Glossy Balm</h3>
+                <p class="price">$19 | 9 shades</p>
+                <button>ADD TO BAG $19</button>
+            </div>
+            <div class="product">
+                <img src="all4new.png" alt="All 4 New Eclipse">
+                <h3>All 4 New Eclipse</h3>
+                <p class="price">$79 ($88 VALUE)</p>
+                <button>ADD TO BAG $79</button>
             </div>
         </div>
     </div>

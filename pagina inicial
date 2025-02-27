@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>r.e.m beauty</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         * {
             margin: 0;
@@ -15,8 +16,11 @@
             font-family: 'Inter', sans-serif;
         }
         
-        
         .menu1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
             background-color: rgb(240, 237, 237);
             height: 35px;
             display: flex;
@@ -24,39 +28,44 @@
             align-items: center;
             font-size: 14px;
             color: #000;
+            z-index: 1000;
         }
         
         .menu2 {
-            background-color: #f8dce26c;
+            position: absolute;
+            top: 35px;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-bottom: 1px solid white;
             height: 50px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 20px;
-        }
-        
-        .main {
-            width: 100vw;
-            height: 100vh;
-            background-image: url("modelo.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-        
+            transition: background-color 0.3s ease;
+            z-index: 999;
         }
         
         .menu2:hover {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .menu2:hover .nav-links a,
+        .menu2:hover .logo {
+            color: #808080;
         }
         
         .logo {
             font-size: 22px;
             font-weight: bold;
-            color: white;
+            color: black;
             text-transform: lowercase;
+            transition: color 0.3s ease;
         }
         
-        .logo span {
-            font-weight: normal;
+        .logo:hover {
+            color: gray;
         }
         
         .nav-links {
@@ -67,7 +76,7 @@
         .nav-links a {
             text-decoration: none;
             font-size: 14px;
-            color: #fff;
+            color: #000;
             font-weight: bold;
         }
         
@@ -82,81 +91,223 @@
         
         .icons i {
             font-size: 16px;
-            color: white;
+            color: rgb(255, 255, 255);
             cursor: pointer;
         }
-        .explore-section {
-            padding: 20px;
+        
+        .hero-container{
+            position: relative;
+            width: 100%;
+            height: 100vh; 
+            background: url('modeloofc.jpg') no-repeat center;
+            background-size: cover;
         }
-        .explore{
-            font-size: 25px;
+        
+        .hero-section {
+            position: absolute;
+            bottom: 20px; 
+            left: 20px; 
+            text-align: left;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 60%;
+        }
+        
+        .hero-section h1{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hero-button {
+            height: 45px;
+            width: 180px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgba(248, 220, 226, 0);
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border: 1px solid white;
+        }
+        
+        .hero-section .new {
+            font-size: 15px;
+        }
+
+        .explore-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            left: 50px;
+            font-size: 45px;
             margin-top: 15px;
             margin-bottom: 10px;
+            left: 60px;
         }
-        .product-container {
-            width: 100%;
+        .detalhe a {
+            font-size: 15px;
+            text-decoration: none; 
+            color: black; 
+        }
+        
+        .product-content {
+            overflow-x: auto; 
+            white-space: nowrap;
             padding: 20px 0;
         }
-        .product {
+
+        .swiper-container {
+            width: 100%;
             display: flex;
-            justify-content: center;
+            overflow-x: auto; 
+            scrollbar-width: thin;
+            white-space: nowrap;
         }
+
+        .swiper-wrapper {
+            display: flex;
+            gap: 20px; 
+        }
+
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            min-width: 350px; 
+            flex-shrink: 0;
+        }
+
         .product img {
             width: 100%;
+            height: auto;
+            max-height: 600px; 
+            object-fit: cover;
             border-radius: 10px;
         }
+
         .product h3 {
-            font-size: 16px;
+            font-size: 18px;
             margin-top: 10px;
         }
+
         .product .price {
             color: #555;
+            font-size: 16px;
             margin: 5px 0;
         }
+
         .product button {
             background: black;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 12px;
             width: 100%;
+            font-size: 16px;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
         }
-        .detalhe a{
-           text-decoration: none;
-           font-size: 14px;
-            color: black;
-            padding: 10px;
-        }
+
         .product button:hover {
             background: rgb(51, 49, 49);
         }
+
+        .swiper-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .swiper-container::-webkit-scrollbar-thumb {
+            background-color: gray;
+            border-radius: 5px;
+        }
+        
+        .hero-container2{
+            top: 30px;
+            position: relative;
+            width: 100%;
+            height: 100vh; 
+            background: url('fundo2.jpg') no-repeat center;
+            background-size: cover;
+        }
+        
+        .hero-section2 {
+            position: absolute;
+            bottom: 20px; 
+            left: 20px; 
+            text-align: left;
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 60%;
+        }
+        
+        .hero-section2 h1{
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .hero-button2 {
+            height: 45px;
+            width: 180px;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgba(248, 220, 226, 0);
+            color: #ffffff;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            border: 1px solid white;
+        }
+        
+        .hero-section2 .new {
+            font-size: 15px;
+        }
+
+
     </style>
 </head>
 <body>
+
     <div class="menu">
         <div class="menu1">
-            <p>free International shipping on orders $150+ USD. free returns always.</p>
+            <p>limited time: get a free mini lengthening mascara on orders $50+ USD. offer ends sunday, 2/23.</p>
         </div>
-        <div class="main">
-            <div class="menu2">
-                <div class="logo">r.e.m.<span>beauty</span></div>
-                <div class="nav-links">
-                    <a href="#">NEW DREAMGLOW COLLECTION</a>
-                    <a href="#">BEST SELLERS</a>
-                    <a href="#">EYES ▾</a>
-                    <a href="#">LIP ▾</a>
-                    <a href="#">FACE ▾</a>
-                    <a href="#">SKINCARE</a>
-                    <a href="#">TOOLS</a>
-                    <a href="#">ABOUT</a>
-                </div>
-                <div class="icons">
-                    <i class="fas fa-search"></i>
-                    <i class="far fa-user"></i>
-                    <i class="fas fa-shopping-bag"></i>
-                </div>
+        <div class="menu2">
+            <div class="logo">r.e.m.<span>beauty</span></div>
+            <div class="nav-links">
+                <a href="#">NEW DREAMGLOW COLLECTION</a>
+                <a href="#">BEST SELLERS</a>
+                <a href="#">EYES ▾</a>
+                <a href="#">LIP ▾</a>
+                <a href="#">FACE ▾</a>
+                <a href="#">SKINCARE</a>
+                <a href="#">TOOLS</a>
+                <a href="#">ABOUT</a>
             </div>
+            <div class="icons">
+                <i class="fas fa-search"></i>
+                <i class="far fa-user"></i>
+                <i class="fas fa-shopping-bag"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-container">
+        <div class="hero-section">
+            <p class="new">_new</p>
+            <h1>DREAMGLOW <br>COLLECTION</h1>
+            <p>new shades of our viral best-sellers, delivering <br>
+                soft swept ethereal color, high shine, and a <br>
+                vibrant, multi-dimensional lit from within flush.</p>
+            <button class="hero-button">SHOP COLLECTION</button>
         </div>
     </div>
 
@@ -168,27 +319,57 @@
             <a href="#">DISCOVER ALL</a>
         </div>
     </div>
+
     <div class="product-content">
-        <div class="product">
+        <div class="swiper-container">
             <div class="swiper-wrapper">
-                <img src="serum.png" alt="Dreamglow Highlight Serum">
-                <h3>Dreamglow Highlight Serum</h3>
-                <p class="price">$26 | 3 shades</p>
-                <button>ADD TO BAG $26</button>
+                <div class="swiper-slide product">
+                    <img src="serum.png" alt="Dreamglow Highlight Serum">
+                    <h3>Dreamglow Highlight Serum</h3>
+                    <p class="price">$26 | 3 shades</p>
+                    <button>ADD TO BAG $26</button>
+                </div>
+                <div class="swiper-slide product">
+                    <img src="glossybalm.png" alt="Glossy Balm">
+                    <h3>Glossy Balm</h3>
+                    <p class="price">$19 | 9 shades</p>
+                    <button>ADD TO BAG $19</button>
+                </div>
+                <div class="swiper-slide product">
+                    <img src="all4new.png" alt="All 4 New Eclipse">
+                    <h3>All 4 New Eclipse</h3>
+                    <p class="price">$79 ($88 VALUE)</p>
+                    <button>ADD TO BAG $79</button>
+                </div>
+                <div class="swiper-slide product">
+                    <img src="ozdust_palette.png" alt="OZDUST EYESHADOW PALETTE">
+                    <h3>Ozdust Eyeshadow Palette</h3>
+                    <p class="price">$55 ($66 VALUE)</p>
+                    <button>ADD TO BAG $55</button>
+                </div>
+                <div class="swiper-slide product">
+                    <img src="ALL3.PNG.png" alt="ALL 3 NEW DREAMGLOW">
+                    <h3>All 3 New Dreamglow</h3>
+                    <p class="price">$69 ($78 VALUE)</p>
+                    <button>ADD TO BAG $69</button>
+                </div>
+
             </div>
-            <div class="product">
-                <img src="glossybalm.png" alt="Glossy Balm">
-                <h3>Glossy Balm</h3>
-                <p class="price">$19 | 9 shades</p>
-                <button>ADD TO BAG $19</button>
-            </div>
-            <div class="product">
-                <img src="all4new.png" alt="All 4 New Eclipse">
-                <h3>All 4 New Eclipse</h3>
-                <p class="price">$79 ($88 VALUE)</p>
-                <button>ADD TO BAG $79</button>
+        </div>
+        <div class="hero-container2">
+            <div class="hero-section2">
+                <p class="new2">_new dreamglow highlight serum</p>
+                <h1>LIT FROM WITHIN</h1>
+                <p>a hydrating, lightweight beauty elixir that <br>
+                    provides a shimmering veil with crystal-like <br>
+                    pigments formulated with peptides and hyaluronic<br>
+                     acid</p>
+                <button class="hero-button2">SHOP COLLECTION</button>
             </div>
         </div>
     </div>
+
+
+
 </body>
 </html>
